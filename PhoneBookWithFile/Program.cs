@@ -1,4 +1,5 @@
-﻿using PhoneBookWithFile.Services;
+﻿using PhoneBookWithFile.Model;
+using PhoneBookWithFile.Services;
 using System;
 
 namespace PhoneBookWithFile
@@ -7,8 +8,19 @@ namespace PhoneBookWithFile
     {
         static void Main(string[] args)
         {
-            MenuService menuService = new MenuService();
-            menuService.ShowMenuService();
+            IFileServiceVersion2 fileServiceVersion2 = new FileServiceVersion2();
+            Contact contact = new Contact();
+            
+            Console.Write("Enter the Name : ");
+            contact.Name = Console.ReadLine();
+            Console.Write("Enter the Number: ");
+            contact.Number = Console.ReadLine();
+
+            //fileServiceVersion2.AddContact(contact);
+
+            //fileServiceVersion2.SearchContact(contact.Name);
+            fileServiceVersion2.RemoveContact(contact.Name);
+
         }
     }
 }

@@ -5,7 +5,7 @@ namespace PhoneBookWithFile.Services
 {
     internal class FileService : IFileService
     {
-        private const string filePath = "../../../phoneBook.txt";
+        private const string filePath = "../../../phoneBook.json";
         private ILoggingService log;
         private string SelectedContact;
         public FileService()
