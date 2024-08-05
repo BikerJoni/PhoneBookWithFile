@@ -1,6 +1,6 @@
 ﻿namespace PhoneBookWithFile.Services
 {
-    internal interface IFileService
+    internal interface IFileServiceVersion2
     {
         void AddContact();
         void SearchContact();

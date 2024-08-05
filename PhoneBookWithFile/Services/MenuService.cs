@@ -4,7 +4,7 @@ namespace PhoneBookWithFile.Services
 {
     internal class MenuService
     {
-        IFileService fileService = new FileService();
+        IFileServiceVersion2 fileService = new TxtFileServise();
         ILoggingService log = new LoggingService();
         public void ShowMenuService()
         {

@@ -9,7 +9,19 @@ namespace PhoneBookWithFile
     {
         static void Main(string[] args)
         {
-            IFileServiceVersion2 fileServiceV2 = new FileServiceVersion2();
+            IFileServiceVersion2 fileServiceV2;
+            Console.WriteLine("Choose fileType: 1- Txt or 2- Json");
+            string fileType = Console.ReadLine();
+            if (fileType == "1")
+            {
+                fileServiceV2 = new FileServiceVersion2();
+            }
+            else
+            {
+                fileServiceV2 = new TxtFileServise();
+            }
+
+
             Contact contact = new Contact();
             AllContacts allContacts = new AllContacts();
 

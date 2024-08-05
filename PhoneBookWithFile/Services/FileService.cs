@@ -3,7 +3,7 @@ using System.IO;
 
 namespace PhoneBookWithFile.Services
 {
-    internal class FileService : IFileService
+    internal class FileService : FileServiceVersion2
     {
         private const string filePath = "../../../phoneBook.json";
         private ILoggingService log;
